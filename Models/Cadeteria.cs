@@ -3,8 +3,7 @@ public class Cadeteria
     private string? nombre;
     private int telefono;
     //lista de Cadetes
-    private List<Cadete>? cadetes;
-    private List<Pedido>? pedidos;
+
     public Cadeteria()
     {
         Cadetes = new List<Cadete>();
@@ -12,9 +11,8 @@ public class Cadeteria
     }
     public string? Nombre { get; set; }
     public int Telefono { get; set; }
-    public List<Cadete>? Cadetes { get => cadetes; set => cadetes = value; }
-    public List<Pedido>? Pedidos { get => pedidos; set => pedidos = value; }
-
+public List<Cadete> Cadetes { get; set; } = new List<Cadete>();
+    public List<Pedido> Pedidos { get; set; } = new List<Pedido>();
     public void AgregarListaCadetes(List<Cadete> cadeteP)
     {
         Cadetes = cadeteP;

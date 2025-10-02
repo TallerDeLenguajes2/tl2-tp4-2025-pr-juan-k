@@ -8,10 +8,10 @@ public class AccesoADatosPedidos
     public List<Pedido> Obtener()
     {
         List<Pedido> pedidos = null;
-        if (!File.Exists(Path.Combine(path, nombreArch)))
+        if (File.Exists(Path.Combine(path, nombreArch)))
         {
             string jsonTX = File.ReadAllText(Path.Combine(path, nombreArch));
-            pedidos = JsonSerializer.Deserialize<List<Pedido>>(Path.Combine(path, nombreArch));
+            pedidos = JsonSerializer.Deserialize<List<Pedido>>(jsonTX);
             return pedidos;
         }
         else

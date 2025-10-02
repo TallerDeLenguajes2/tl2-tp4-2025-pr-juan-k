@@ -12,13 +12,10 @@ public class CadeteriaController : ControllerBase
 
     public CadeteriaController()
     {
-        ADCadeteria = new AccesoADatosCadeteria();
-        ADCadete = new AccesoADatosCadetes();
+        
         ADPedidos = new AccesoADatosPedidos();
 
-        cadeteria = ADCadeteria.Obtener();
-        cadeteria.AgregarListaCadetes(ADCadete.Obtener());
-        cadeteria.AgregarListaPedidos(ADPedidos.Obtener());   
+        
     }
     /// <summary>
     /// Optenemos lista de pedidos
@@ -28,8 +25,7 @@ public class CadeteriaController : ControllerBase
     [Route("GetPedidos")]
     public List<Pedido> GetPedidos()
     {
-        List<Pedido> liPedido = new List<Pedido>();
-        return liPedido;
+        return ADPedidos.Obtener();
     }
     /// <summary>
     /// OPtenemos la lista de los cadetes
@@ -39,8 +35,7 @@ public class CadeteriaController : ControllerBase
     [Route("GetCadetes")]
     public List<Cadete> GetCadete()
     {
-        List<Cadete> liCad = new List<Cadete>();
-        return liCad;
+        return ADCadete.Obtener();
     }
     /// <summary>
     /// retorna un Informe
@@ -59,7 +54,7 @@ public class CadeteriaController : ControllerBase
     [Route("PostPedido")]
     public void AgregarPedido(Pedido pedido)
     {
-
+        
     }
     /// <summary>
     /// Asigno un pedido a un cadete

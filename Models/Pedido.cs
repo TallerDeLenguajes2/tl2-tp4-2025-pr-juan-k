@@ -14,10 +14,10 @@ public class Pedido
     private int nro = 0;
     private string? observacion;
     //public Cliente cliente;
-    private EstadoPedido estado;
-
     public int Nro { get => nro; set => nro = value; }
     public string? Observacion { get => observacion; set => observacion = value; }
+
+
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public EstadoPedido Estado { get; set; } 
 }
