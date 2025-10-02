@@ -4,7 +4,7 @@ public class AccesoADatosCadeteria
 {
     private string path = "Files/cadeteria.json";
 
-    public Cadeteria Optener()
+    public Cadeteria Obtener()
     {
         Cadeteria cadeteria = null;
         if (!File.Exists(path))

@@ -1,11 +1,16 @@
 public class Cadete
 {
     private int id;
-    public string? nombre;
+    private string? nombre;
     private string? direccion;
     private int telefono;
+
+    public int Id { get => id; set => id = value; }
+    public string? Nombre { get => nombre; set => nombre = value; }
+    public string? Direccion { get => direccion; set => direccion = value; }
+    public int Telefono { get => telefono; set => telefono = value; }
     //private List<Pedidos>? pedidosL;
     //lista PEDIDOS
 
-   
+
 }

@@ -1,0 +1,17 @@
+[
+  {
+  "nro": 0,
+  "observacion": "3ra casa",
+  "estado": "Pendiente"
+  },
+  {
+  "nro": 1,
+  "observacion": "casa 2 piso",
+  "estado": "Entregado"
+  },
+  {
+  "nro": 2,
+  "observacion": "casa verde",
+  "estado": "Pendiente"
+  }
+]

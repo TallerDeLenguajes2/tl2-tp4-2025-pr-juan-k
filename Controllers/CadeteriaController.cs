@@ -5,6 +5,21 @@ using Microsoft.AspNetCore.Mvc;
 [Route("[Controller]")]
 public class CadeteriaController : ControllerBase
 {
+    private Cadeteria cadeteria; // cadeteria PRINCIPAL
+    private AccesoADatosCadeteria ADCadeteria;
+    private AccesoADatosCadetes ADCadete;
+    private AccesoADatosPedidos ADPedidos;
+
+    public CadeteriaController()
+    {
+        ADCadeteria = new AccesoADatosCadeteria();
+        ADCadete = new AccesoADatosCadetes();
+        ADPedidos = new AccesoADatosPedidos();
+
+        cadeteria = ADCadeteria.Obtener();
+        cadeteria.AgregarListaCadetes(ADCadete.Obtener());
+        cadeteria.AgregarListaPedidos(ADPedidos.Obtener());   
+    }
     /// <summary>
     /// Optenemos lista de pedidos
     /// </summary>

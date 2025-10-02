@@ -7,18 +7,21 @@ public class Cadeteria
     private List<Pedido>? pedidos;
     public Cadeteria()
     {
-        cadetes = new List<Cadete>();
-        pedidos = new List<Pedido>();
+        Cadetes = new List<Cadete>();
+        Pedidos = new List<Pedido>();
     }
     public string? Nombre { get; set; }
     public int Telefono { get; set; }
+    public List<Cadete>? Cadetes { get => cadetes; set => cadetes = value; }
+    public List<Pedido>? Pedidos { get => pedidos; set => pedidos = value; }
+
     public void AgregarListaCadetes(List<Cadete> cadeteP)
     {
-        cadetes = cadeteP;
+        Cadetes = cadeteP;
     }
     public void AgregarListaPedidos(List<Pedido> pedidosP)
     {
-        pedidos = pedidosP;
+        Pedidos = pedidosP;
     }
      
 }
